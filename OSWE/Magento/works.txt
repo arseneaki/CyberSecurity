@@ -1,0 +1,34 @@
+GET /checkout/cart/add/uenc//product/1/?form_key=test HTTP/1.1
+Host: 192.168.11.140
+X-Requested-With: XMLHttpRequest
+Cookie: PHPSESSID=offsec2016; form_key=test
+Connection: close
+
+
+GET /checkout/cart/ HTTP/1.1
+Host: 192.168.11.140
+Cookie: PHPSESSID=offec2016; form_key=test
+Connection: close
+
+
+POST /rest/default/V1/guest-carts/0fbfaeef666c635c14099e07a4f22ba6/estimate-shipping-methods HTTP/1.1
+Host: 192.168.11.140
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:52.0) Gecko/20100101 Firefox/52.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.11.140/checkout/cart/
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 75
+Cookie: private_content_version=18ca9fb90192ab7eb1242f84c70b5bc4; mage-translation-storage=%7B%7D; mage-translation-file-version=%7B%7D; mage-cache-storage=%7B%7D; mage-cache-storage-section-invalidation=%7B%7D; mage-cache-sessid=true; section_data_ids=%7B%22cart%22%3A1586498266%2C%22directory-data%22%3A1586498266%2C%22customer%22%3A1586498266%2C%22compare-products%22%3A1586498266%2C%22last-ordered-items%22%3A1586498266%2C%22review%22%3A1586498266%2C%22wishlist%22%3A1586498266%7D; PHPSESSID=fssqdgbnv93ig5dqdflmn0cqt0; form_key=test
+Connection: close
+
+{"address":{"country_id":"US","region_id":"0","region":"","postcode":null}}
+
+
+POST /rest/V1/guest-carts/0fbfaeef666c635c14099e07a4f22ba6/set-payment-information HTTP/1.1
+Host: 192.168.11.140
+Content-Type: application/json
+Content-Length: 115
+{"paymentMethod":{"method":"checkmo","additional_data":{"additional_information":"abcd"}},"email":"valid@magento.com"} 

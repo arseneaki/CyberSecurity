@@ -1,0 +1,9 @@
+        $sql    = "SELECT password, email FROM %smembers WHERE member_id=%d";
+        $sql    = "SELECT password, email FROM %smembers WHERE member_id=%d";
+
+        $row = queryDB($sql, array(TABLE_PREFIX, $_REQUEST['id']), TRUE);
+        $winsam=array(TABLE_PREFIX, $_REQUEST['id']);
+
+// method to print array item
+        print_r ($winsam);
+        print_r ($row);
